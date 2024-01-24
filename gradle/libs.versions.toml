@@ -1,0 +1,68 @@
+[versions]
+agp = "8.1.4"
+android-compileSdk = "34"
+android-minSdk = "24"
+android-targetSdk = "34"
+androidx-activityCompose = "1.8.2"
+androidx-appcompat = "1.6.1"
+androidx-constraintlayout = "2.1.4"
+androidx-core-ktx = "1.12.0"
+androidx-espresso-core = "3.5.1"
+androidx-material = "1.10.0"
+androidx-test-junit = "1.1.5"
+compose = "1.5.4"
+compose-compiler = "1.5.6"
+compose-plugin = "1.5.11"
+junit = "4.13.2"
+kotlin = "1.9.21"
+ktor = "2.3.7"
+coroutines = "1.7.3"
+kamel="0.9.1"
+koin="1.1.0"
+mvvmCore = "0.13.1"
+voyagerVersion = "1.0.0-rc05"
+material3 = "1.1.2"
+kotlinx-serializarion-new = "1.3.1"
+voyager = "1.0.0"
+uiToolingPreviewAndroid = "1.5.4"
+moko-version = "0.23.0"
+
+[libraries]
+material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktor-client-cio= {module ="io.ktor:ktor-client-cio", version.ref = "ktor"}
+ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
+kotlin-serialization = {module = "io.ktor:ktor-serialization-kotlinx-json", version.ref="ktor"}
+kotlin-serialization-new = {module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref="kotlinx-serializarion-new"}
+
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+media-kamel = {module="media.kamel:kamel-image", version.ref="kamel"}
+koin-compose = {module="io.insert-koin:koin-compose", version.ref = "koin"}
+ktor-client-content-negotiation = {module = "io.ktor:ktor-client-content-negotiation", version.ref= "ktor"}
+voyager-navigator =  {group = "cafe.adriel.voyager", name = "voyager-navigator", version.ref= "voyagerVersion"}
+voyager-bottom-sheet =  {group = "cafe.adriel.voyager", name = "voyager-bottom-sheet-navigator", version.ref= "voyagerVersion"}
+voyager-tab-navigator =  {group = "cafe.adriel.voyager", name = "voyager-tab-navigator", version.ref= "voyagerVersion"}
+voyager-transitions =  {group = "cafe.adriel.voyager", name = "voyager-transitions", version.ref= "voyagerVersion"}
+# For koin integration https://voyager.adriel.cafe/screenmodel/koin-integration
+voyager = { module = "cafe.adriel.voyager:voyager-screenmodel", version.ref = "voyager" }
+voyager-koin =  {module = "cafe.adriel.voyager:voyager-koin", version.ref= "voyager"}
+androidx-ui-tooling-preview-android = { group = "androidx.compose.ui", name = "ui-tooling-preview-android", version.ref = "uiToolingPreviewAndroid" }
+moko-classpath =  {group = "dev.icerock.moko", name = "resources-generator", version.ref = "moko-version"}
+moko-resource = {group = "dev.icerock.moko", name = "resources", version.ref = "moko-version"}
+moko-resource-compose = {group = "dev.icerock.moko", name = "resources-compose", version.ref = "moko-version"}
+[bundles]
+ktor = ["ktor-client-core", "ktor-client-content-negotiation"]
+voyager = ["voyager-navigator", "voyager-bottom-sheet", "voyager-tab-navigator", "voyager-transitions", "voyager-koin"]
+moko-resources = ["moko-resource", "moko-resource-compose"]
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
