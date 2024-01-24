@@ -38,6 +38,7 @@ kotlin {
             //  implementation(libs.kotlinx.coroutines.android)
         }
         commonMain.dependencies {
+            implementation(libs.kamel.image)
             implementation(libs.bundles.moko.resources)
             implementation(compose.runtime)
             implementation(compose.foundation)

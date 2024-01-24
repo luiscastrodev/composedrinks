@@ -26,6 +26,8 @@ kotlinx-serializarion-new = "1.3.1"
 voyager = "1.0.0"
 uiToolingPreviewAndroid = "1.5.4"
 moko-version = "0.23.0"
+kamelImage = "0.9.1"
+
 
 [libraries]
 material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
@@ -56,6 +58,7 @@ androidx-ui-tooling-preview-android = { group = "androidx.compose.ui", name = "u
 moko-classpath =  {group = "dev.icerock.moko", name = "resources-generator", version.ref = "moko-version"}
 moko-resource = {group = "dev.icerock.moko", name = "resources", version.ref = "moko-version"}
 moko-resource-compose = {group = "dev.icerock.moko", name = "resources-compose", version.ref = "moko-version"}
+kamel-image = { module = "media.kamel:kamel-image", version.ref = "kamelImage" }
 [bundles]
 ktor = ["ktor-client-core", "ktor-client-content-negotiation"]
 voyager = ["voyager-navigator", "voyager-bottom-sheet", "voyager-tab-navigator", "voyager-transitions", "voyager-koin"]
