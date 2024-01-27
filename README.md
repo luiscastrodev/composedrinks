@@ -11,4 +11,6 @@ This is a Kotlin Multiplatform project targeting Android, iOS.
   you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
 
 
-https://github.com/luiscastrodev/composedrinks/blob/main/image.png
+
+![Image description](https://github.com/luiscastrodev/composedrinks/blob/main/image.png)
+
