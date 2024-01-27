@@ -52,13 +52,11 @@ kotlin {
             //  implementation(libs.kotlinx.coroutines.core)
             implementation(libs.media.kamel)
             implementation(libs.koin.compose)
-            implementation(libs.voyager.koin)
             // For navigation
-            implementation(libs.voyager)
             implementation( libs.kotlin.serialization.new)
-            implementation(libs.voyager.transitions)
             implementation("io.ktor:ktor-client-logging:2.3.7")
-
+            implementation(libs.moko.mvvm.core)
+            implementation(libs.moko.mvvm.compose)
 
         }
 

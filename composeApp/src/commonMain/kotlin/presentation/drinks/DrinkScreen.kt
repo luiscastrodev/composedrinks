@@ -18,19 +18,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import cafe.adriel.voyager.core.screen.Screen
-import cafe.adriel.voyager.koin.getScreenModel
 import domain.models.Drink
 import io.kamel.image.KamelImage
 import io.kamel.image.asyncPainterResource
-import org.jetbrains.compose.resources.ExperimentalResourceApi
-import org.jetbrains.compose.resources.painterResource
+import org.koin.compose.koinInject
 import presentation.state.UIState
 
-object DrinkScreen : Screen {
     @Composable
-    override fun Content() {
-        val viewModel = getScreenModel<DrinkViewModel>()
+     fun DrinkScreen(viewModel: DrinkViewModel = koinInject()) {
         val state by viewModel.state.collectAsState()
 
         when (state) {
@@ -106,4 +101,3 @@ object DrinkScreen : Screen {
             }
         }
     }
-}

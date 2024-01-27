@@ -1,17 +1,16 @@
 package presentation.drinks
 
-import cafe.adriel.voyager.core.model.ScreenModel
-import cafe.adriel.voyager.core.model.screenModelScope
 import common.Resource
 import domain.repository.DrinkRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import presentation.state.UIState
+import dev.icerock.moko.mvvm.viewmodel.ViewModel
 
 class DrinkViewModel(
     val drinkRepository: DrinkRepository
-) : ScreenModel {
+) : ViewModel() {
     private val _state = MutableStateFlow<UIState>(UIState.Init)
     val state = _state.asStateFlow()
 
@@ -20,7 +19,7 @@ class DrinkViewModel(
     }
 
     private fun search() {
-        screenModelScope.launch {
+        viewModelScope.launch {
             try {
                 _state.emit(UIState.Loading)
                 when (val result = drinkRepository.search()) {
